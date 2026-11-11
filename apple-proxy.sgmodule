@@ -1,24 +1,29 @@
-#!name=Apple Siri & Private Relay Proxy
-#!desc=Proxy rules combined from the supplied screenshots.
+#!name=Apple Intelligence, Siri & Private Relay Proxy
+#!desc=Apple Intelligence, Siri and Private Relay rules routed through PROXY.
 
 [Rule]
+# Siri and search
 DOMAIN,guzzoni.apple.com,PROXY
+DOMAIN-SUFFIX,smoot.apple.com,PROXY
+DOMAIN-KEYWORD,siri,PROXY
+
+# Private Relay and Private Cloud Compute
 DOMAIN,mask-api.fe.apple-dns.net,PROXY
 DOMAIN,mask-api.icloud.com,PROXY
 DOMAIN,mask-t.apple-dns.net,PROXY
 DOMAIN,mask.apple-dns.net,PROXY
-DOMAIN-SUFFIX,smoot.apple.com,PROXY
 DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
 DOMAIN-SUFFIX,apple-relay.cloudflare.com,PROXY
 DOMAIN-SUFFIX,apple-relay.tasty-edge.com,PROXY
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com,PROXY
+DOMAIN-SUFFIX,apple-relay.akamaized.net,PROXY
 DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,PROXY
 DOMAIN-SUFFIX,cp4.cloudflare.com,PROXY
+DOMAIN-SUFFIX,mask-h2.icloud.com,PROXY
+DOMAIN-SUFFIX,mask.icloud.com,PROXY
+
+# Other Apple services
 DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,PROXY
 DOMAIN-SUFFIX,gateway.icloud.com,PROXY
 DOMAIN-SUFFIX,ls.apple.com,PROXY
-DOMAIN-SUFFIX,mask-h2.icloud.com,PROXY
-DOMAIN-SUFFIX,mask.icloud.com,PROXY
 DOMAIN-SUFFIX,apps.mastic.com,PROXY
-DOMAIN-KEYWORD,siri,PROXY
-DOMAIN-SUFFIX,apple-relay.akamaized.net,PROXY
-DOMAIN-SUFFIX,apple-relay.fastly-edge.com,PROXY
