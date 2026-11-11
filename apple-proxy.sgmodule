@@ -1,5 +1,5 @@
-#!name=Apple Intelligence, Siri & Private Relay Proxy
-#!desc=Apple Intelligence, Siri and related services routed through PROXY.
+#!name=Siri AI
+#!desc=解锁 Apple Intelligence 和 Siri AI
 
 [Rule]
 # Apple Intelligence, Siri and Search: Apple enterprise network host list
