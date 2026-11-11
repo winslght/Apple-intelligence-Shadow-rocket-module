@@ -4,28 +4,28 @@
 [Rule]
 # Apple Intelligence, Siri and Search: Apple enterprise network host list
 # https://support.apple.com/en-us/101555
-DOMAIN,guzzoni.apple.com,PROXY
-DOMAIN-SUFFIX,smoot.apple.com,PROXY
-DOMAIN-SUFFIX,apple-relay.cloudflare.com,PROXY
-DOMAIN-SUFFIX,apple-relay.fastly-edge.com,PROXY
-DOMAIN-SUFFIX,cp4.cloudflare.com,PROXY
-DOMAIN-SUFFIX,apple-relay.apple.com,PROXY
+DOMAIN,guzzoni.apple.com,Siri AI
+DOMAIN-SUFFIX,smoot.apple.com,Siri AI
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,Siri AI
+DOMAIN-SUFFIX,apple-relay.fastly-edge.com,Siri AI
+DOMAIN-SUFFIX,cp4.cloudflare.com,Siri AI
+DOMAIN-SUFFIX,apple-relay.apple.com,Siri AI
 
 # Additional Siri, Private Relay and related services (community rules)
 # https://github.com/RocM301/Apple-Rule
-DOMAIN-KEYWORD,siri,PROXY
-DOMAIN,wps.apple.com,PROXY
-DOMAIN,mask-api.fe.apple-dns.net,PROXY
-DOMAIN,mask-api.icloud.com,PROXY
-DOMAIN,mask-t.apple-dns.net,PROXY
-DOMAIN,mask.apple-dns.net,PROXY
-DOMAIN-SUFFIX,apple-relay.tasty-edge.com,PROXY
-DOMAIN-SUFFIX,apple-relay.akamaized.net,PROXY
-DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,PROXY
-DOMAIN-SUFFIX,mask-h2.icloud.com,PROXY
-DOMAIN-SUFFIX,mask.icloud.com,PROXY
-DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,PROXY
-DOMAIN-SUFFIX,gateway.icloud.com,PROXY
-DOMAIN-SUFFIX,ls.apple.com,PROXY
-DOMAIN-SUFFIX,apps.mastic.com,PROXY
-DOMAIN-SUFFIX,apps.mzstatic.com,PROXY
+DOMAIN-KEYWORD,siri,Siri AI
+DOMAIN,wps.apple.com,Siri AI
+DOMAIN,mask-api.fe.apple-dns.net,Siri AI
+DOMAIN,mask-api.icloud.com,Siri AI
+DOMAIN,mask-t.apple-dns.net,Siri AI
+DOMAIN,mask.apple-dns.net,Siri AI
+DOMAIN-SUFFIX,apple-relay.tasty-edge.com,Siri AI
+DOMAIN-SUFFIX,apple-relay.akamaized.net,Siri AI
+DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,Siri AI
+DOMAIN-SUFFIX,mask-h2.icloud.com,Siri AI
+DOMAIN-SUFFIX,mask.icloud.com,Siri AI
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,Siri AI
+DOMAIN-SUFFIX,gateway.icloud.com,Siri AI
+DOMAIN-SUFFIX,ls.apple.com,Siri AI
+DOMAIN-SUFFIX,apps.mastic.com,Siri AI
+DOMAIN-SUFFIX,apps.mzstatic.com,Siri AI
