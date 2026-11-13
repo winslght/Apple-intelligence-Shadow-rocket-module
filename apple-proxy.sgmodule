@@ -1,17 +1,45 @@
 #!name=Siri AI
-#!desc=解锁 Apple Intelligence 和 Siri AI
+#!desc=Apple Intelligence、中文 Siri 与视觉智能分流
+# AppleFlow rules adapted from https://github.com/Kianuni/AppleFlow (MIT License)
+# AppleFlow: https://github.com/Kianuni/AppleFlow/blob/main/modules/AppleFlow.module
+
+[General]
+skip-proxy = %APPEND% guzzoni.apple.com
+always-real-ip = %APPEND% guzzoni.apple.com, *.guzzoni.apple.com, *.siri.apple.com, dejavu.apple.com, sequoia.apple.com, *.smoot.apple.com, *.push.apple.com
 
 [Rule]
-# Apple Intelligence, Siri and Search: Apple enterprise network host list
-# https://support.apple.com/en-us/101555
-DOMAIN,guzzoni.apple.com,Siri AI
-DOMAIN-SUFFIX,smoot.apple.com,Siri AI
+# AppleFlow: Siri direct; these must precede the Siri keyword rule
+DOMAIN-SUFFIX,guzzoni.apple.com,DIRECT
+DOMAIN-SUFFIX,siri.apple.com,DIRECT
+DOMAIN,dejavu.apple.com,DIRECT
+DOMAIN,sequoia.apple.com,DIRECT
+DOMAIN-SUFFIX,smoot.apple.com,DIRECT
+
+# Apple Intelligence and Private Cloud Compute
+DOMAIN-SUFFIX,issuer.apple.com,Siri AI
+DOMAIN-SUFFIX,ropes.apple.com,Siri AI
+DOMAIN,ss-cleanup-proxy-prod.us-east-1m.app.apple.com,Siri AI
+DOMAIN-SUFFIX,app.apple.com,Siri AI
+DOMAIN-SUFFIX,apple-relay.apple.com,Siri AI
 DOMAIN-SUFFIX,apple-relay.cloudflare.com,Siri AI
 DOMAIN-SUFFIX,apple-relay.fastly-edge.com,Siri AI
+DOMAIN-SUFFIX,apple-relay.akamaized.net,Siri AI
 DOMAIN-SUFFIX,cp4.cloudflare.com,Siri AI
-DOMAIN-SUFFIX,apple-relay.apple.com,Siri AI
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,Siri AI
 
-# Additional Siri, Private Relay and related services (community rules)
+# AppleFlow: third-party extensions and visual search
+DOMAIN-SUFFIX,openai.com,Siri AI
+DOMAIN-SUFFIX,chatgpt.com,Siri AI
+DOMAIN-SUFFIX,oaistatic.com,Siri AI
+DOMAIN-SUFFIX,oaiusercontent.com,Siri AI
+DOMAIN,openai-api.arkoselabs.com,Siri AI
+DOMAIN-SUFFIX,googleapis.com,Siri AI
+DOMAIN-SUFFIX,gstatic.com,Siri AI
+DOMAIN,lens.google.com,Siri AI
+DOMAIN-SUFFIX,anthropic.com,Siri AI
+DOMAIN-SUFFIX,claude.ai,Siri AI
+
+# Existing Siri, Private Relay and related service rules
 # https://github.com/RocM301/Apple-Rule
 DOMAIN-KEYWORD,siri,Siri AI
 DOMAIN,wps.apple.com,Siri AI
@@ -20,11 +48,9 @@ DOMAIN,mask-api.icloud.com,Siri AI
 DOMAIN,mask-t.apple-dns.net,Siri AI
 DOMAIN,mask.apple-dns.net,Siri AI
 DOMAIN-SUFFIX,apple-relay.tasty-edge.com,Siri AI
-DOMAIN-SUFFIX,apple-relay.akamaized.net,Siri AI
 DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,Siri AI
 DOMAIN-SUFFIX,mask-h2.icloud.com,Siri AI
 DOMAIN-SUFFIX,mask.icloud.com,Siri AI
-DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com,Siri AI
 DOMAIN-SUFFIX,gateway.icloud.com,Siri AI
 DOMAIN-SUFFIX,ls.apple.com,Siri AI
 DOMAIN-SUFFIX,apps.mastic.com,Siri AI
